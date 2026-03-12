@@ -144,3 +144,17 @@ Let’s review what we did in this workshop:
 - Submitted a pull request to have code accepted back into original repo. Someone else will review our pull request.
 - Review and add comments/feedback to someone else's pull request
 - Approved and merged someone else's pull request
+
+# Next Step: Build the Frontend
+Once you have...
+1. Finished the code for your assigned API endpoint and helper function
+2. Gotten your pull request approved & merged into the shared codebase
+3. Gotten checked off by your instructor
+You're ready to start building the frontend of the Food Trucks App!
+
+## Your Task
+
+- Review the existing code in the client folder.
+- Render all food truck data on the Home page as cards.
+
+<img width="1000" alt="Home page of the Food Trucks App" src="https://github.com/user-attachments/assets/1698b582-4023-4d93-bf6e-ed092a0dfaef" />
