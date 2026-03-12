@@ -73,7 +73,7 @@ form button {
   cursor: pointer;
 }
 
-/* .food-trucks {
+.food-trucks {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -103,4 +103,4 @@ form button {
 .value {
   text-align: right;
   margin-left: 1rem;
-} */
+}
