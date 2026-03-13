@@ -65,9 +65,9 @@ By doing this activity together, we will practice...
 ### 3. Edit the SQL-cheatsheet.md file in your `new-feature` branch
 
 1. You have been assigned an API endpoint. Your task is to:
-   1. Complete the API endpoint (with either `app.get()` or `app.post()`
-   2. Complete its helper function
-   3. Test it in Postman and confirm it works according to the API documentation.
+   - Complete the API endpoint (with either `app.get()` or `app.post()`
+   - Complete its helper function
+   - Test it in Postman and confirm it works according to the API documentation.
 
 2. Once you have completed your new feature locally, commit your changes and push to your branch.
 
