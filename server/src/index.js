@@ -74,6 +74,28 @@ async function addOneFoodTruck(
 
 // 10. deleteOneFoodTruck(id)
 
+async function deleteOneFoodTruck(id) {
+
+    const truckData = await db.query(
+        `SELECT name FROM food_trucks WHERE id = $1`, [id]
+    );
+
+    if (truckData.rows.length === 0) {
+        return `No animal found with id ${id}`;
+    }
+
+    const animalName = animalData.rows[0].name;
+
+    await db.query(
+        `DELETE FROM animals WHERE id = $1`, [id]
+    );
+
+    console.log(`Success! ${animalName} was deleted!`);
+
+    return `Success! ${animalName} was deleted!`;
+
+};
+
 // 11. updateFoodTruckLocation(id, newLocation)
 
 // 12. updateFoodTruckRating(id, newRating)
@@ -128,6 +150,26 @@ app.post("/add-one-food-truck", async (req, res) => {
 });
 
 // 10. POST /delete-one-food-truck/:id
+
+// Priscilla's Code
+
+app.get("/delete-one-food-truck/:id", async (req, res) => {
+  
+  let truckId = await db.query(`SELECT id FROM food_trucks WHERE id = $1`, [id]);
+
+  if (truckId.rows.length === 0) {
+    return `No truck found with id of ${id}`
+  }
+
+  const truckName = truckData.rows[0].name;
+  
+  await db.query(`DELETE FROM food_trucks WHERE id = $1`, [id]);
+
+  console.log(`Success! Truck #${id}, ${truckName} was deleted ✨`);
+
+  return `Success! Truck #${id}, ${truckName} was deleted ✨`;
+
+});
 
 // 11. POST /update-food-truck-location
 
