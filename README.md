@@ -2,7 +2,9 @@
 
 We will work as a team of developers to create the API for a Food Trucks App. 
 
-Each developer will code and test their assigned API endpoint & helper function. Assigned tasks are listed in the `api-documentation.md` file. 
+Each developer will code and test their assigned API endpoint & helper function. 
+
+Check out the `api-documentation.md` file for the assigned tasks. 
 
 ## **Learning Goals**
 
