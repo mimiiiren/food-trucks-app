@@ -83,19 +83,21 @@ async function deleteOneFoodTruck(id) {
     );
 
   // Small error handling in case the truck has either already been deleted or did not exist in the first place.
-    if (truckData.rows.length === 0) {
+    if (truckName.rows.length === 0) {
         return `No truck found with id ${id}, or name ${truckName}`;
     }
 
   // This runs only once when we run the function and is the main line of code that actually carries out the deletion of the food truck.
     await db.query(
-        `DELETE FROM animals WHERE id = $1`, [id]
-    );
+        `DELETE FROM food_trucks WHERE id = $1`, [id]
+  );
+  
+  const name = truckName.rows[0].name;
 
   // Both the console log and the return are merely there to return a confirmation to the user and us. 
-    console.log(`Success! ${truckName} #${id} was deleted!`);
+    console.log(`Success! Food truck #${id}, ${name} was deleted!`);
 
-    return `Success! ${truckName} #${id} was deleted!`;
+    return `Success! Food truck #${id}, ${name} was deleted!`;
 
 };
 
@@ -164,14 +166,14 @@ app.post('/delete-one-food-truck/:id', async (req, res) => {
         let id = req.params.id;
 
       // Here, a reply will 
-        const result = await deleteOneAnimal(id);
+        const result = await deleteOneFoodTruck(id);
 
         res.send(result);
     
     } catch (error) {
         console.error(error);
         res.status(500).json({
-            error: 'There was an issue while deleting the animal. Please review your request and try again'
+            error: 'There was an issue while deleting the food truck. Please review your request and try again'
         })
     }
 
