@@ -46,13 +46,23 @@ By doing this activity together, we will practice...
   
 ---
 
-### 🛠️ 2. Adding the `config.js` file
+### 🛠️ 2. Project Setup: Adding the `config.js` file`node_modules` folder 
 
-In the `server/src` folder, create a `config.js` file. Your instructor will provide you with code that you will copy and paste into this file, which will contain the access credentials to the Food Trucks database that's already hosted on Neon. 
+1. **Create the `config.js` file** 
+
+   In the `server/src` folder, create a `config.js` file. Your instructor will provide you with code that you will copy and paste into this file, which will contain the access credentials to the Food Trucks database that's already hosted on Neon.
 
 ---
 
-### 🛠️ 3. Making a new branch in your Github repo
+### 🛠️ 3. Project Setup: Generating the `node_modules` folder in the `server` folder
+
+1. In the terminal, `cd` into your `server` folder.
+
+2. Run `npm install` to generate the `node_modules` folder. This command tells Node to look in the `package.json` file, find the list of dependencies, and install all of them into the `node_modules` folder.
+
+---
+
+### 🛠️ 4. Making a new branch in your Github repo
 
 1. Create a branch called “new-feature”
 
@@ -76,7 +86,7 @@ In the `server/src` folder, create a `config.js` file. Your instructor will prov
 
 ---
 
-### 🛠️ 4. Edit the index.js file in your `new-feature` branch
+### 🛠️ 5. Edit the index.js file in your `new-feature` branch
 
 1. You have been assigned an API endpoint. Your task is to:
    - Complete the API endpoint (with either `app.get()` or `app.post()`
@@ -93,7 +103,7 @@ In the `server/src` folder, create a `config.js` file. Your instructor will prov
 
 ---
 
-### 🛠️ 5. Merging the new-feature branch into your main branch
+### 🛠️ 6. Merging the new-feature branch into your main branch
 
 1.  **Switch to the Target Branch (e.g., `main`)**
 
@@ -112,7 +122,7 @@ In the `server/src` folder, create a `config.js` file. Your instructor will prov
           git merge new-feature --no-edit
     
     If this command takes you to a strange window in the Terminal where you can't type anything, don't panic! This is called Vim, a text editor that lives on the command line. You can exit back to the normal command line by typing `:wq`.
-5.  **Push the Merged Changes to the Remote Repository**
+4.  **Push the Merged Changes to the Remote Repository**
 
     After a successful merge, push the updated `main` branch to GitHub:
 
@@ -120,7 +130,7 @@ In the `server/src` folder, create a `config.js` file. Your instructor will prov
 
 ---
 
-### 🛠️ 6. Submit a Pull Request (PR)
+### 🛠️ 7. Submit a Pull Request (PR)
 
 In order to have your code accepted back into the original repo, you'll need to submit a pull request.
 
@@ -142,7 +152,7 @@ In order to have your code accepted back into the original repo, you'll need to 
 
 ---
 
-### 🛠️ 7. Review, Provide Feedback, and Accept another person's Pull Request
+### 🛠️ 8. Review, Provide Feedback, and Accept another person's Pull Request
 
 1. Review one other person's pull request and look at their code that they want to merge into the main branch. [The Github documentation on pull requests will help you do this.](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/approving-a-pull-request-with-required-reviews)
 2. Add a comment to their pull request and provide feedback about their proposed changes. This is an opportunity to practice talking about code and giving respectful and constructive feedback: if you notice something cool or admirable, tell them! Or if you notice something they can improve or something they should fix before the pull request can be approved, let them know.
@@ -191,6 +201,7 @@ Once you've finished your assigned API endpoint and helper function, gotten it a
 Finished? Try one of these bonus challenges!
 
 1. 🌟 Add a delete button to each food on the Home page
-2. 🌟 Show a "Top Rated" badge on trucks with rating >= 4.5
-3. 🌟 Add a sort feature on the frontend for price level or rating
-4. 🌟 Add a search bar to find a food truck by name
+2. 🌟 Show a "Top Rated" badge on trucks with rating >= 4.5.
+3. 🌟 Add a sort feature on the frontend for price level or rating.
+4. 🌟 Add a search bar to find a food truck by name.
+5. 🌟 Show the food truck's rating as stars. For example, a rating of 4 would show as ⭐️⭐️⭐️.
