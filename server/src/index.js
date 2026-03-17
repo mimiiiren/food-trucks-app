@@ -46,6 +46,13 @@ async function getFoodTruckById(id) {
 
 // 4. getFoodTrucksByPrice(price)
 
+async function getFoodTruckByPrice(price) {
+  const result = await db.query(
+    "SELECT * FROM food_trucks WHERE price_level = $1", [price]
+  );
+  return result.rows;
+   }
+
 // 5. getTopRatedFoodTrucks()
 async function getTopRatedFoodTrucks() {
   const result = await db.query(
@@ -165,6 +172,12 @@ app.get("/get-food-truck-by-id/:id", async (req, res) => {
 // 3. GET /get-vegan-food-trucks
 
 // 4. GET /get-food-trucks-by-price/:price
+
+app.get("/get-food-trucks-by-price/:price", async (req, res) => {
+  const price = req.params.price;
+  const trucks = await getFoodTruckByPrice(price);
+  res.json(trucks);
+});
 
 // 5. GET /get-top-rated-food-trucks
 app.get("/get-top-rated-food-trucks", async (req, res) => {
