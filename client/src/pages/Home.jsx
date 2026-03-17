@@ -32,6 +32,22 @@ function Home() {
     getFoodTrucksCount();
   }, []);
 
+  // post request to delete food truck by id
+  const deleteOneFoodTruck = async (id) => {
+    try {
+      const response = await fetch(`/api/delete-one-food-truck/${id}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await response.text();
+      getAllFoodTrucks();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <h1>All Food Trucks</h1>
@@ -79,6 +95,7 @@ function Home() {
                 <b>Rating: </b>
                 {rating}
               </p>
+              <button onClick={() => deleteOneFoodTruck(id)}>Delete</button>
             </div>
           );
         })}
