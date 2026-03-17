@@ -108,9 +108,11 @@ In the `server/src` folder, create a `config.js` file. Your instructor will prov
           git pull origin main
 
 3.  **Merge the Specified Branch into the Current branch**
-    git merge new-feature --no-edit
+
+          git merge new-feature --no-edit
+    
     If this command takes you to a strange window in the Terminal where you can't type anything, don't panic! This is called Vim, a text editor that lives on the command line. You can exit back to the normal command line by typing `:wq`.
-4.  **Push the Merged Changes to the Remote Repository**
+5.  **Push the Merged Changes to the Remote Repository**
 
     After a successful merge, push the updated `main` branch to GitHub:
 
@@ -189,6 +191,6 @@ Once you've finished your assigned API endpoint and helper function, gotten it a
 Finished? Try one of these bonus challenges!
 
 1. 🌟 Add a delete button to each food on the Home page
-2. 🌟 Show a "Top Rated" badge on trucks with rating >= 4.5.
-3. 🌟 Add a sort feature on the frontend for price level or rating.
-4. 🌟 Add a search bar to find a food truck by name.
+2. 🌟 Show a "Top Rated" badge on trucks with rating >= 4.5
+3. 🌟 Add a sort feature on the frontend for price level or rating
+4. 🌟 Add a search bar to find a food truck by name
