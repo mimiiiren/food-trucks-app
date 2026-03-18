@@ -77,7 +77,9 @@ async function sortedByPrice() {
 
 // 8. getFoodTrucksCount()
 async function getFoodTrucksCount() {
+  // sql query that counts all rows in food_trucks table
   const result = await db.query("SELECT COUNT(*) FROM food_trucks")
+  // return first item in rows property
   return result.rows[0];
 }
 // 9. addOneFoodTruck(name, current_location, daily_special, slogan, has_vegan_options, price_level, rating)
@@ -196,7 +198,9 @@ app.get("/get-food-trucks-sorted-by-price", async (req, res) => {
 
 // 8. GET /get-food-trucks-count
 app.get("/get-food-trucks-count", async (req, res) => {
+  // wait for helper function to resolve, then store in count
   const count = await getFoodTrucksCount()
+  // send count as a JSON response back to the client
   res.json(count);
 })
 // 9. POST /add-one-food-truck
